@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "username": "goo@harvard.edu",
+      "password": "floris",
+      "scopes": ["read", "add", "delete"]
+    },
+    {
+      "username": "sticky@gloo.com",
+      "password": "floria",
+      "scopes": ["read"]
+    }
+  ],
+  "comments": [
+    {
+      "id": "10ed2d7b-4a6c-4dad-ac25-d0a56c697753",
+      "text": "I'm the holiday armadillo!",
+      "user": "ross@friends.com",
+      "shop_id": "414hj12-j4h124-j112j"
+    },
+    {
+      "id": "c03b65c8-477b-4814-aed0-b090d51e4ca0",
+      "text": "It's like...all my life, everyone has always told me: \"You're a shoe!\"",
+      "user": "rachel@friends.com",
+      "shop_id": "414hj12-j4h124-j112j"
+
+    },
+    {
+      "id": "911327fa-c6fc-467f-8138-debedaa6d3ce",
+      "text": "I...am over...YOU.",
+      "user": "rachel@friends.com",
+      "shop_id": "23hh2y-u2yy2y40-y765j"
+    },
+    {
+      "id": "ede699aa-9459-4feb-b95e-db1271ab41b7",
+      "text": "Imagine the worst things you think about yourself. Now, how would you feel if the one person that you trusted the most in the world not only thinks them too, but actually uses them as reasons not to be with you.",
+      "user": "rachel@friends.com",
+      "shop_id": "246578-j42o-o2uiyghjg-42hjg"
+    },
+    {
+      "id": "c58741cf-22fd-4036-88de-fe51fd006cfc",
+      "text": "You threw my sandwich away?",
+      "user": "ross@friends.com",
+      "shop_id": "2j2h533-3j46ui49n34jj22-902"
+    },
+    {
+      "id": "dc8016e0-5d91-45c4-b4fa-48cecee11842",
+      "text": "I grew up with Monica. If you didn't eat fast, you didn't eat!",
+      "user": "ross@friends.com",
+      "shop_id": "23hh2y-u2yy2y40-y765j"
+    },
+    {
+      "id": "87ba7f3a-2ce7-4aa0-9827-28261735f518",
+      "text": "I'm gonna go get one of those job things.",
+      "user": "rachel@friends.com",
+      "shop_id": "23hh2y-u2yy2y40-y765j"
+    },
+    {
+      "id": "9aad4cbc-7fff-45b3-8373-a64d3fdb239b",
+      "text": "Ross, I am a human doodle!",
+      "user": "rachel@friends.com",
+      "shop_id": "c58741cf-22fd-4036-88de-fe51fd006cfc"
+    }
+  ],
+  "shops": [
+    { 
+      "id": "414hj12-j4h124-j112j",
+      "name": "Nohan Supermarket",
+      "addr": "Carrer de Marina 68",
+      "working_hour":"08:00 - 00:00",
+      "lat":41.392166, 
+      "lng": 2.19083
+    },
+    {
+      "id": "2oi5o79jgfk6-b4ng7h745-22",
+      "name": "Supermercat Olimpic",
+      "addr": "Carrer de Moscou 26",
+      "working_hour":"24h",
+      "lat":41.3896, 
+      "lng": 2.194417
+    },
+    {
+      "id": "23hh2y-u2yy2y40-y765j",
+      "name": "Supermercat",
+      "addr": "Carrer de Marina 200",
+      "working_hour":"09:00 - 23:00",
+      "lat":41.400441, 
+      "lng": 2.179932
+    },
+    {
+      "id": "246578-j42o-o2uiyghjg-42hjg",
+      "name": "Max Supermercat",
+      "addr": "Avinguda d'Icaria 134",
+      "working_hour":"09:00 - 00:00",
+      "lat":41.389472, 
+      "lng": 2.195313
+    },
+    {
+      "id": "c58741cf-22fd-4036-88de-fe51fd006cfc",
+      "text": "You threw my sandwich away?",
+      "user": "ross@friends.com"
+    },
+    {
+      "id": "2j2h533-3j46ui49n34jj22-902",
+      "name": "Max Supermercat",
+      "addr": "Avinguda d'Icaria 134",
+      "working_hour":"09:00 - 00:00",
+      "lat":41.3896,
+      "lng": 2.194417
+    }
+  ]
+}
