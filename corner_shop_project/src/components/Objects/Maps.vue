@@ -12,7 +12,7 @@
             >
                 <gmap-marker
                         :key="index"
-                        v-for="(m, index) in markers"
+                        v-for="(m, index) in shops"
                         :position="m.position"
                         :clickable="true"
                         :draggable="true"
@@ -60,40 +60,16 @@
         props: ['myLat', 'myLng','myZoom','myId'],
         data () {
             return {
-                homeLocation: {
-                    position: {lat: 41.397315, lng: 2.190144},
-                    icon: 'src/assets/house.png',
-                    type: 'house',
-                    addr: 'Almogàvers 123, Barcelona'
-                },
                 show: true,
-                markers: [{
-                    position: {lat: 41.397315, lng: 2.190144},
-                    icon: 'src/assets/house.png',
-                    type: 'house'
-                },{
-                    position: {lat: 41.392166, lng: 2.19083},
-                    icon: 'src/assets/shop.png',
-                    type: 'shop'
-                },{
-                    position: {lat: 41.3896, lng: 2.194417},
-                    icon: 'src/assets/shop.png',
-                    type: 'shop'
-                },{
-                    position: {lat:41.393631, lng: 2.18889},
-                    icon: 'src/assets/shop.png',
-                    type: 'shop'
-                },{
-                    position: {lat:41.400441, lng: 2.179932},
-                    icon: 'src/assets/shop.png',
-                    type: 'shop'
-                },{
-                    position: {lat:41.389472, lng: 2.195313},
-                    icon: 'src/assets/shop.png',
-                    type: 'shop'
-                },
-                ]
+                shops: []
             }
+        },
+        beforeMount() {
+            axios.all([
+                axios.get('/api/shops'),
+                ]).then(({ data: shopsData }) => {
+                    this.shops = shopsData.shops;
+                });
         },
         methods: {
             showOption : function(e) {

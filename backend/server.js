@@ -154,6 +154,14 @@ apiRoutes.get('/comments',
   }
 );
 
+apiRoutes.get('/shops',
+  (req, res) => {
+    const shops = shopsData;
+
+    res.json({ shops });
+  }
+);
+
 // Add an comments
 apiRoutes.post('/comments',
   (req, res) => {

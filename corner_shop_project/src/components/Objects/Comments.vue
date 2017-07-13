@@ -18,60 +18,20 @@
             return{
                 id: this.myId,
                 comments: [
-                    {
-                    id: "121",
-                    text: "Something",
-                    user: "abc",
-                    shop_id: "414hj12-j4h124-j112j"
-                    },
-                    {
-                    id: "451",
-                    text: "Hard to find",
-                    user: "soTrue",
-                    shop_id: "414hj12-j4h124-j112j"
-
-                    },
-                    {
-                    id: "451",
-                    text: "Nice place",
-                    user: "Floris",
-                    shop_id: "23hh2y-u2yy2y40-y765j"
-                    },
-                    {
-                    id: "667",
-                    text: "they cant speak english",
-                    user: "Goo",
-                    shop_id: "246578-j42o-o2uiyghjg-42hjg"
-                    },
-                    {
-                    id: "323",
-                    text: "Dont like it",
-                    user: "Biem",
-                    shop_id: "2j2h533-3j46ui49n34jj22-902"
-                    },
-                    {
-                    id: "142",
-                    text: "Such a good service",
-                    user: "ARUM",
-                    shop_id: "23hh2y-u2yy2y40-y765j"
-                    },
-                    {
-                    id: 142,
-                    text: "Good Place.",
-                    user: "saul",
-                    shop_id: "23hh2y-u2yy2y40-y765j"
-                    },
-                    {
-                    id: "142",
-                    text: "not so good",
-                    user: "escobar",
-                    shop_id: "c58741cf-22fd-4036-88de-fe51fd006cfc"
-                    }
                 ],
                     checkShop:  function(i) {
                         return this.myId == this.comments[i].id;
                     }
-                }
+                }   
+            },
+            beforeMount() {
+                    axios.all([
+                        axios.get('/api/me'),
+                        axios.get('/api/comments'),
+                        ]).then(([{ data: meData }, { data: commentsData }]) => {
+                            this.user = meData.user;
+                            this.comments = commentsData.comments;
+                        });
             }
         }
 
